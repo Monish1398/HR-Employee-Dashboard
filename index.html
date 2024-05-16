@@ -82,19 +82,27 @@
 				<img src="img/logo.png" class="logoimg">
 
 			</a>
-			<i class='bx bx-menu'></i>
-			<a href="#" class="nav-link">Categories</a>
+			<!-- <i class='bx bx-menu'></i> -->
+
 			<form action="#">
 				<div class="form-input">
 					<input type="search" placeholder="Search...">
 					<button type="submit" class="search-btn"><i class='bx bx-search'></i></button>
 				</div>
 			</form>
-			<input type="checkbox" id="switch-mode" hidden>
-			<label for="switch-mode" class="switch-mode"></label>
-			<a href="#" class="notification">
-				<i class='bx bxs-bell'></i>
-				<span class="num">8</span>
+			<!-- <input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label> -->
+			<a href="#">
+				<img src="img/head_sun.png" class="notifiy">
+			</a>
+			<a href="#">
+				<img src="img/head_chat.png" class="notifiy">
+			</a>
+			<a href="#">
+				<img src="img/head_notification.png" class="notifiy">
+			</a>
+			<a href="#">
+				<img src="img/head_setting.png" class="notifiy">
 			</a>
 			<a href="#" class="profile">
 				<img src="img/people.png">
@@ -119,8 +127,19 @@
 				<div class="ordergrph">
 					<div class="head">
 						<h3>Application's Info</h3>
+						<div class="appsid">
+							<p class="box1"></p>
+							<p>Received</p>
+
+						</div>
+						<div class="appsid">
+							<p class="box2"></p>
+							<p>
+								Processed
+							</p>
+						</div>
 						<select name="Months" id="months" class="appdate">
-							<option value="month">Months</option>
+							<option value="month">Month</option>
 							<option value="Jan">January</option>
 							<option value="Feb">Feburary</option>
 							<option value="March">March</option>
@@ -128,30 +147,27 @@
 						</select>
 
 					</div>
+					
 					<canvas id="myChart" style="width:100%;max-width:600px"></canvas>
 					<script>
-						const xValues = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000];
+						var xValues = ["2013", "2022", "2023", "2024", "2025"];
+						var yValues = [55, 49, 44, 24, 15];
+						var barColors = ["#002b55", "#0a66c2", "#0a66c2", "#002b55", "lightred"];
 
 						new Chart("myChart", {
-							type: "line",
+							type: "bar",
 							data: {
 								labels: xValues,
 								datasets: [{
-									data: [860, 1140, 1060, 1060, 1070, 1110, 1330, 2210, 7830, 2478],
-									borderColor: "darkblue",
-									fill: false
-								}, {
-									data: [1600, 1700, 1700, 1900, 2000, 2700, 4000, 5000, 6000, 7000],
-									borderColor: "#0A66C2",
-									fill: false
-								}, {
-									data: [300, 700, 2000, 5000, 6000, 4000, 2000, 1000, 200, 100],
-									borderColor: "#008CBA",
-									fill: false
+									backgroundColor: barColors,
+									data: yValues
 								}]
 							},
 							options: {
-								legend: { display: false }
+								legend: { display: false },
+								title: {
+									display: true,
+								}
 							}
 						});
 					</script>
@@ -160,13 +176,15 @@
 
 				</div>
 				<div class="todo todoscard">
-					<img src="img/forms.svg" class="imgba" />
+					<img src="img/file.png" class="imgbas" />
 					<img src="img/bapeople.png" class="imgba" />
 
 
 
 					<h3 class="num1">0333</h3>
-					<img src="img/bapeople.png" class="imgba2" />
+					<div>
+						<img src="img/bapeople.png" class="imgba2" />
+					</div>
 
 
 					<h2 class="newassements">New Assessment's</h2>
@@ -177,581 +195,1133 @@
 
 				</div>
 			</div>
-
-			<div class="table-data">
-				<div class="order">
-					<div class="head">
-						<h3>Today Interview Meeting Info</h3>
-						<br />
-					</div>
-					<ul class="box-infos">
-						<li>
-							<div class="row">
-								<div class="column" style="background-color:white;">
-									<img src="https://lh3.googleusercontent.com/ytP9VP86DItizVX2YNA-xTYzV09IS7rh4WexVp7eilIcfHmm74B7odbcwD5DTXmL0PF42i2wnRKSFPBHlmSjCblWHDCD2oD1oaM1CGFcSd48VBKJfsCi4bS170PKxGwji8CPmehwPw=w200-h247-no"
-										class="todimg cardinfoimage" />
-									<p class="card__name">Maria Smith</p>
-									<p class="cardssmall">Senior Python Developer</p>
-									<p class="cad1"></p>
-									<div class="grid-container">
-										<div>
-											<img src="img/calicons.png" class="gtcont2">
-											<p class="cardDate">17th Feb</p>
+			<div class="second_section">
+				<div>
+					<div class="card">
+						<div class="card-header">
+							<div class="meetingInfoHeader">
+								<p class="m-0">Today Interviews Meetings Info</p>
+								<div></div>
+							</div>
+						</div>
+						<div style="text-align: right; margin-right: 20px; margin-top: 5px;"><svg stroke="currentColor"
+								fill="currentColor" stroke-width="0" viewBox="0 0 16 16" class="vertical-dots"
+								height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0">
+								</path>
+							</svg></div>
+						<div class="card-body">
+							<div class="userDetailsShow">
+								<div id="meetinguser" class="meetingUserHead"
+									style="width: 800px; margin-bottom: 30px;">
+									<div class="leftSideUser">
+										<div style="border-bottom: 1px solid rgb(214, 214, 214); height: 200px;">
+											<div><img src="./img/user.jpg" class="userImage">
+												<p class="mb-1">John Smith</p>
+												<p>Senior Python Developer</p>
+											</div>
 										</div>
-										<div>
-											<img src="img/clockicon.png" class="gtcont2">
-											<p class="cardDate">10.30Am</p>
+										<div class="bootomIcon" style="color: rgb(10, 102, 194);">
+											<div style="height: 90%; border-right: 1px solid rgb(10, 102, 194);"><img
+													src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHwSURBVHgB5ZVdctMwEMd3V85M676YG4QbhAsQ+wSkJ0gYqOEt4QQNJ+grUzpT5wicQCFwADgB4QSYh0L48C6rFKdOY8+UkYc+9Pdgybsa/bXSagVwJzk4Wow6R7ZXtbn/MLWDqm3vue0epO+HdXMQ3AAmGXaQtibV/wmgebQ1sDCxAE/r5sDrhr2nNiYyFlrklxQPgiYnS/EYBJauTxScqOUjM2elXxcz1tXfE5bplY1iXfuYuTisjLPGQNQoBAbmq1fJ0nX3UzvT0Jers2ReutXWI6AvF2fxxqbnlgdIeXVcmC7WbePWMRX3SyEfVEh0rqQxImRzEj5b5OCLXDY3yro2aIzo++nDQ/DE3SsSM3L9nYjUEWnjv2WKKSDazLvrFa0AsoQWEDbdRiFB6APiB2gBJIkbhVAwRpE5tIAg9WuFXPF0becnvwFPXCKoVK9WyBVPvcJZniXeyUBM0+pZb9LbRSMCsasI4Mk6GsYhgoz0vmZrYfeJJjZihGMXTRtlBws6d9FcnPZnpW0d0Y9v5lzVdRH8EjwJ03fHKrKzM8Ffx0BTJEcmu5++BT+kKyAvru9MwPR7BgV8vhzjXgfqCeJYRCYa41f4R/Sct56Tktt7JgxC7io7sflUPlptgHXG8IkdMF0VRF9Wr5MM/hd/ACDszvSeCrXmAAAAAElFTkSuQmCC"
+													class="icon">
+												<p>19th Feb 2024</p>
+											</div>
+											<div style="height: 90%;"><svg stroke="currentColor" fill="currentColor"
+													stroke-width="0" version="1.1" id="Layer_1" x="0px" y="0px"
+													viewBox="0 0 30 30" class="icon" height="1em" width="1em"
+													xmlns="http://www.w3.org/2000/svg">
+													<path d="M3.74,14.47c0-2.04,0.51-3.93,1.52-5.66s2.38-3.1,4.11-4.11s3.61-1.51,5.64-1.51c1.52,0,2.98,0.3,4.37,0.89
+				s2.58,1.4,3.59,2.4s1.81,2.2,2.4,3.6s0.89,2.85,0.89,4.39c0,1.52-0.3,2.98-0.89,4.37s-1.4,2.59-2.4,3.59s-2.2,1.8-3.59,2.39
+				s-2.84,0.89-4.37,0.89c-1.53,0-3-0.3-4.39-0.89s-2.59-1.4-3.6-2.4s-1.8-2.2-2.4-3.58S3.74,16,3.74,14.47z M6.22,14.47
+				c0,2.37,0.86,4.43,2.59,6.18c1.73,1.73,3.79,2.59,6.2,2.59c1.58,0,3.05-0.39,4.39-1.18s2.42-1.85,3.21-3.2s1.19-2.81,1.19-4.39
+				s-0.4-3.05-1.19-4.4s-1.86-2.42-3.21-3.21s-2.81-1.18-4.39-1.18s-3.05,0.39-4.39,1.18S8.2,8.72,7.4,10.07S6.22,12.89,6.22,14.47z
+				 M14.14,14.47V7.81c0-0.23,0.08-0.43,0.24-0.59s0.36-0.24,0.59-0.24s0.43,0.08,0.59,0.24s0.24,0.36,0.24,0.59v6.15l3.59,2.09
+				c0.2,0.12,0.32,0.29,0.38,0.51s0.03,0.43-0.09,0.62c-0.16,0.28-0.4,0.42-0.72,0.42c-0.17,0-0.31-0.04-0.42-0.12l-3.82-2.23
+				c-0.17-0.05-0.31-0.15-0.42-0.29S14.14,14.66,14.14,14.47z"></path>
+												</svg>
+												<p>10.30 A.M</p>
+											</div>
+										</div>
+										<div></div>
+									</div>
+									<div class="rightSideInterview">
+										<div class="tableCard ">
+											<div class="table_data rightBorder">
+												<p>1st level: 7/10</p>
+											</div>
+											<div class="table_data">
+												<p>Interviewer: Stella</p>
+											</div>
+										</div>
+										<div class="tableCard">
+											<div class="table_data rightBorder">
+												<p>2nd level: 6/10</p>
+											</div>
+											<div class="table_data ">
+												<p>Interviewer: Smith</p>
+											</div>
+										</div>
+										<div class="tableCard">
+											<div class="table_data rightBorder">
+												<p>3rd level: Waiting</p>
+											</div>
+											<div class="table_data">
+												<p>Interviewer: <span style="color: rgb(10, 102, 194);">Stephan</span>
+												</p>
+											</div>
+										</div>
+										<div class="tableCard">
+											<div class="table_data rightBorder">
+												<p>Meet via: G-Meet</p>
+											</div>
+											<div class="table_data">
+												<p>Interviewer: Johnson</p>
+											</div>
+										</div>
+										<div class="bottomButton">
+											<div style="margin-right: 5px; text-align: end;"><button type="button"
+													class="button-width unfill btn btn-primary"
+													fdprocessedid="z0avy">Reschedule
+													Meeting</button></div>
+											<div style="margin-left: 5px; text-align: justify;"><button type="button"
+													class="button-width ml-2 btn btn-primary"
+													fdprocessedid="w1o3y4">Join
+													Meeting</button></div>
 										</div>
 									</div>
 								</div>
-								<div class="column" style="background-color:white;">
-
-									<table id="customers">
-										<tr>
-											<th></th>
-											<th></th>
-											<th></th>
-											<th></th>
-										</tr>
-										<tr>
-											<td>1st Level:</td>
-											<td>7/10</td>
-										</tr>
-										<tr>
-											<td>2nd Level:</td>
-											<td>6/10</td>
-										</tr>
-										<tr>
-											<td>3rd Level:</td>
-											<td>Waiting</td>
-										</tr>
-										<tr>
-											<td>Meet Via</td>
-											<td>G-Meet</td>
-										</tr>
-									</table>
+								<div id="meetinguser" class="meetingUserHead"
+									style="width: 800px; margin-bottom: 30px;">
+									<div class="leftSideUser">
+										<div style="border-bottom: 1px solid rgb(214, 214, 214); height: 200px;">
+											<div><img src="./img/user_wo.jpg" class="userImage">
+												<p class="mb-1">Maria</p>
+												<p>Senior Python Developer</p>
+											</div>
+										</div>
+										<div class="bootomIcon" style="color: rgb(10, 102, 194);">
+											<div style="height: 90%; border-right: 1px solid rgb(10, 102, 194);"><img
+													src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHwSURBVHgB5ZVdctMwEMd3V85M676YG4QbhAsQ+wSkJ0gYqOEt4QQNJ+grUzpT5wicQCFwADgB4QSYh0L48C6rFKdOY8+UkYc+9Pdgybsa/bXSagVwJzk4Wow6R7ZXtbn/MLWDqm3vue0epO+HdXMQ3AAmGXaQtibV/wmgebQ1sDCxAE/r5sDrhr2nNiYyFlrklxQPgiYnS/EYBJauTxScqOUjM2elXxcz1tXfE5bplY1iXfuYuTisjLPGQNQoBAbmq1fJ0nX3UzvT0Jers2ReutXWI6AvF2fxxqbnlgdIeXVcmC7WbePWMRX3SyEfVEh0rqQxImRzEj5b5OCLXDY3yro2aIzo++nDQ/DE3SsSM3L9nYjUEWnjv2WKKSDazLvrFa0AsoQWEDbdRiFB6APiB2gBJIkbhVAwRpE5tIAg9WuFXPF0becnvwFPXCKoVK9WyBVPvcJZniXeyUBM0+pZb9LbRSMCsasI4Mk6GsYhgoz0vmZrYfeJJjZihGMXTRtlBws6d9FcnPZnpW0d0Y9v5lzVdRH8EjwJ03fHKrKzM8Ffx0BTJEcmu5++BT+kKyAvru9MwPR7BgV8vhzjXgfqCeJYRCYa41f4R/Sct56Tktt7JgxC7io7sflUPlptgHXG8IkdMF0VRF9Wr5MM/hd/ACDszvSeCrXmAAAAAElFTkSuQmCC"
+													class="icon">
+												<p>19th Feb 2024</p>
+											</div>
+											<div style="height: 90%;"><svg stroke="currentColor" fill="currentColor"
+													stroke-width="0" version="1.1" id="Layer_1" x="0px" y="0px"
+													viewBox="0 0 30 30" class="icon" height="1em" width="1em"
+													xmlns="http://www.w3.org/2000/svg">
+													<path d="M3.74,14.47c0-2.04,0.51-3.93,1.52-5.66s2.38-3.1,4.11-4.11s3.61-1.51,5.64-1.51c1.52,0,2.98,0.3,4.37,0.89
+				s2.58,1.4,3.59,2.4s1.81,2.2,2.4,3.6s0.89,2.85,0.89,4.39c0,1.52-0.3,2.98-0.89,4.37s-1.4,2.59-2.4,3.59s-2.2,1.8-3.59,2.39
+				s-2.84,0.89-4.37,0.89c-1.53,0-3-0.3-4.39-0.89s-2.59-1.4-3.6-2.4s-1.8-2.2-2.4-3.58S3.74,16,3.74,14.47z M6.22,14.47
+				c0,2.37,0.86,4.43,2.59,6.18c1.73,1.73,3.79,2.59,6.2,2.59c1.58,0,3.05-0.39,4.39-1.18s2.42-1.85,3.21-3.2s1.19-2.81,1.19-4.39
+				s-0.4-3.05-1.19-4.4s-1.86-2.42-3.21-3.21s-2.81-1.18-4.39-1.18s-3.05,0.39-4.39,1.18S8.2,8.72,7.4,10.07S6.22,12.89,6.22,14.47z
+				 M14.14,14.47V7.81c0-0.23,0.08-0.43,0.24-0.59s0.36-0.24,0.59-0.24s0.43,0.08,0.59,0.24s0.24,0.36,0.24,0.59v6.15l3.59,2.09
+				c0.2,0.12,0.32,0.29,0.38,0.51s0.03,0.43-0.09,0.62c-0.16,0.28-0.4,0.42-0.72,0.42c-0.17,0-0.31-0.04-0.42-0.12l-3.82-2.23
+				c-0.17-0.05-0.31-0.15-0.42-0.29S14.14,14.66,14.14,14.47z"></path>
+												</svg>
+												<p>10.30 A.M</p>
+											</div>
+										</div>
+										<div></div>
+									</div>
+									<div class="rightSideInterview">
+										<div class="tableCard ">
+											<div class="table_data rightBorder">
+												<p>1st level: 7/10</p>
+											</div>
+											<div class="table_data">
+												<p>Interviewer: Stella</p>
+											</div>
+										</div>
+										<div class="tableCard">
+											<div class="table_data rightBorder">
+												<p>2nd level: 6/10</p>
+											</div>
+											<div class="table_data ">
+												<p>Interviewer: Smith</p>
+											</div>
+										</div>
+										<div class="tableCard">
+											<div class="table_data rightBorder">
+												<p>3rd level: Waiting</p>
+											</div>
+											<div class="table_data">
+												<p>Interviewer: <span style="color: rgb(10, 102, 194);">Stephan</span>
+												</p>
+											</div>
+										</div>
+										<div class="tableCard">
+											<div class="table_data rightBorder">
+												<p>Meet via: G-Meet</p>
+											</div>
+											<div class="table_data">
+												<p>Interviewer: Johnson</p>
+											</div>
+										</div>
+										<div class="bottomButton">
+											<div style="margin-right: 5px; text-align: end;"><button type="button"
+													class="button-width unfill btn btn-primary">Reschedule
+													Meeting</button></div>
+											<div style="margin-left: 5px; text-align: justify;"><button type="button"
+													class="button-width ml-2 btn btn-primary">Join Meeting</button>
+											</div>
+										</div>
+									</div>
 								</div>
-								<div class="column" style="background-color:white;">
-
-									<table id="customers">
-										<tr>
-											<th></th>
-											<th></th>
-											<th></th>
-											<th></th>
-										</tr>
-										<tr>
-											<td>Interviwer</td>
-											<td>Stella</td>
-										</tr>
-										<tr>
-											<td>Interviwer</td>
-											<td>Smith</td>
-										</tr>
-										<tr>
-											<td>Interviwer</td>
-											<td class="colcad">Stephan</td>
-										</tr>
-										<tr>
-											<td>Attendees</td>
-											<td>Jhonson</td>
-										</tr>
-									</table>
+								<div id="meetinguser" class="meetingUserHead"
+									style="width: 800px; margin-bottom: 30px;">
+									<div class="leftSideUser">
+										<div style="border-bottom: 1px solid rgb(214, 214, 214); height: 200px;">
+											<div><img src="./img/user.jpg" class="userImage">
+												<p class="mb-1">Rajesh</p>
+												<p>Senior Python Developer</p>
+											</div>
+										</div>
+										<div class="bootomIcon" style="color: rgb(10, 102, 194);">
+											<div style="height: 90%; border-right: 1px solid rgb(10, 102, 194);"><img
+													src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHwSURBVHgB5ZVdctMwEMd3V85M676YG4QbhAsQ+wSkJ0gYqOEt4QQNJ+grUzpT5wicQCFwADgB4QSYh0L48C6rFKdOY8+UkYc+9Pdgybsa/bXSagVwJzk4Wow6R7ZXtbn/MLWDqm3vue0epO+HdXMQ3AAmGXaQtibV/wmgebQ1sDCxAE/r5sDrhr2nNiYyFlrklxQPgiYnS/EYBJauTxScqOUjM2elXxcz1tXfE5bplY1iXfuYuTisjLPGQNQoBAbmq1fJ0nX3UzvT0Jers2ReutXWI6AvF2fxxqbnlgdIeXVcmC7WbePWMRX3SyEfVEh0rqQxImRzEj5b5OCLXDY3yro2aIzo++nDQ/DE3SsSM3L9nYjUEWnjv2WKKSDazLvrFa0AsoQWEDbdRiFB6APiB2gBJIkbhVAwRpE5tIAg9WuFXPF0becnvwFPXCKoVK9WyBVPvcJZniXeyUBM0+pZb9LbRSMCsasI4Mk6GsYhgoz0vmZrYfeJJjZihGMXTRtlBws6d9FcnPZnpW0d0Y9v5lzVdRH8EjwJ03fHKrKzM8Ffx0BTJEcmu5++BT+kKyAvru9MwPR7BgV8vhzjXgfqCeJYRCYa41f4R/Sct56Tktt7JgxC7io7sflUPlptgHXG8IkdMF0VRF9Wr5MM/hd/ACDszvSeCrXmAAAAAElFTkSuQmCC"
+													class="icon">
+												<p>19th Feb 2024</p>
+											</div>
+											<div style="height: 90%;"><svg stroke="currentColor" fill="currentColor"
+													stroke-width="0" version="1.1" id="Layer_1" x="0px" y="0px"
+													viewBox="0 0 30 30" class="icon" height="1em" width="1em"
+													xmlns="http://www.w3.org/2000/svg">
+													<path d="M3.74,14.47c0-2.04,0.51-3.93,1.52-5.66s2.38-3.1,4.11-4.11s3.61-1.51,5.64-1.51c1.52,0,2.98,0.3,4.37,0.89
+				s2.58,1.4,3.59,2.4s1.81,2.2,2.4,3.6s0.89,2.85,0.89,4.39c0,1.52-0.3,2.98-0.89,4.37s-1.4,2.59-2.4,3.59s-2.2,1.8-3.59,2.39
+				s-2.84,0.89-4.37,0.89c-1.53,0-3-0.3-4.39-0.89s-2.59-1.4-3.6-2.4s-1.8-2.2-2.4-3.58S3.74,16,3.74,14.47z M6.22,14.47
+				c0,2.37,0.86,4.43,2.59,6.18c1.73,1.73,3.79,2.59,6.2,2.59c1.58,0,3.05-0.39,4.39-1.18s2.42-1.85,3.21-3.2s1.19-2.81,1.19-4.39
+				s-0.4-3.05-1.19-4.4s-1.86-2.42-3.21-3.21s-2.81-1.18-4.39-1.18s-3.05,0.39-4.39,1.18S8.2,8.72,7.4,10.07S6.22,12.89,6.22,14.47z
+				 M14.14,14.47V7.81c0-0.23,0.08-0.43,0.24-0.59s0.36-0.24,0.59-0.24s0.43,0.08,0.59,0.24s0.24,0.36,0.24,0.59v6.15l3.59,2.09
+				c0.2,0.12,0.32,0.29,0.38,0.51s0.03,0.43-0.09,0.62c-0.16,0.28-0.4,0.42-0.72,0.42c-0.17,0-0.31-0.04-0.42-0.12l-3.82-2.23
+				c-0.17-0.05-0.31-0.15-0.42-0.29S14.14,14.66,14.14,14.47z"></path>
+												</svg>
+												<p>10.30 A.M</p>
+											</div>
+										</div>
+										<div></div>
+									</div>
+									<div class="rightSideInterview">
+										<div class="tableCard ">
+											<div class="table_data rightBorder">
+												<p>1st level: 7/10</p>
+											</div>
+											<div class="table_data">
+												<p>Interviewer: Stella</p>
+											</div>
+										</div>
+										<div class="tableCard">
+											<div class="table_data rightBorder">
+												<p>2nd level: 6/10</p>
+											</div>
+											<div class="table_data ">
+												<p>Interviewer: Smith</p>
+											</div>
+										</div>
+										<div class="tableCard">
+											<div class="table_data rightBorder">
+												<p>3rd level: Waiting</p>
+											</div>
+											<div class="table_data">
+												<p>Interviewer: <span style="color: rgb(10, 102, 194);">Stephan</span>
+												</p>
+											</div>
+										</div>
+										<div class="tableCard">
+											<div class="table_data rightBorder">
+												<p>Meet via: G-Meet</p>
+											</div>
+											<div class="table_data">
+												<p>Interviewer: Johnson</p>
+											</div>
+										</div>
+										<div class="bottomButton">
+											<div style="margin-right: 5px; text-align: end;"><button type="button"
+													class="button-width unfill btn btn-primary">Reschedule
+													Meeting</button></div>
+											<div style="margin-left: 5px; text-align: justify;"><button type="button"
+													class="button-width ml-2 btn btn-primary">Join Meeting</button>
+											</div>
+										</div>
+									</div>
 								</div>
-								<button class="bttodo">Reschedule Meeting</button>
-								<button class="bttodoups">Join Meeting</button>
-
-							</div>
-				</div>
-
-			</div>
-			</li>
-
-			</ul>
-			</div>
-
-			</div>
-
-
-			<div class="table-data">
-				<div class="order">
-
-					<div class="head">
-						<h3>Posted Jobs</h3>
-						<div>
-							<h5 class=>View All</h5>
-						</div>
-						<i class='bx bx-search'></i>
-						<i class='bx bx-filter'></i>
-					</div>
-					<ul class="box-infos">
-						<li>
-							<header>
-								<h4 class="head1">
-									<span class="devicon--python"></span>
-									Angular Developer
-								</h4>
-							</header>
-							<br />
-							<h5>Senior Developers</h5>
-							<h3 class="cols1">250</h3>
-							<h5>Total Applicants</h5>
-							<br />
-							<footer class="foo3">
-								<br />
-								<h6 class="foo1">38k</h6>
-								<h6 class="foo2">2 min ago</h6>
-
-							</footer>
-						</li>
-						<li>
-							<header>
-								<h4 class="head1">
-									<span class="devicon--python"></span>
-									Python Developer
-								</h4>
-							</header>
-							<br />
-							<h5>Senior Developers</h5>
-							<h3 class="cols1">200</h3>
-							<h5>Total Applicants</h5>
-							<br />
-							<footer class="foo3">
-								<br />
-								<h6 class="foo1">28k</h6>
-								<h6 class="foo2">6 min ago</h6>
-
-							</footer>
-						</li>
-						<li>
-							<header>
-								<h4 class="head1">
-									<span class="devicon--python"></span>
-									UI/UX Designer
-								</h4>
-							</header>
-							<br />
-							<h5>Senior Developers</h5>
-							<h3 class="cols1">280</h3>
-							<h5>Total Applicants</h5>
-							<br />
-							<footer class="foo3">
-								<br />
-								<h6 class="foo1">15k</h6>
-								<h6 class="foo2">9 min ago</h6>
-
-							</footer>
-						</li>
-						<li>
-							<header>
-								<h4 class="head1">
-									<span class="devicon--python"></span>
-									Bussiness Analysis
-								</h4>
-							</header>
-							<br />
-							<h5>Senior Developers</h5>
-							<h3 class="cols1">290</h3>
-							<h5>Total Applicants</h5>
-							<br />
-							<footer class="foo3">
-								<br />
-								<h6 class="foo1">21k</h6>
-								<h6 class="foo2">12 min ago</h6>
-
-							</footer>
-						</li>
-						<li>
-							<header>
-								<h4 class="head1">
-									<span class="devicon--python"></span>
-									Devops Deployment Jenkins Role
-								</h4>
-							</header>
-							<br />
-							<h5>Senior Developers</h5>
-							<h3 class="cols1">220</h3>
-							<h5>Total Applicants</h5>
-							<br />
-							<footer class="foo3">
-								<br />
-								<h6 class="foo1">18k</h6>
-								<h6 class="foo2">26 min ago</h6>
-
-							</footer>
-						</li>
-						<li>
-							<header>
-								<h4 class="head1">
-									<span class="devicon--python"></span>
-									Data Engineer Developer Role
-								</h4>
-							</header>
-							<br />
-							<h5>Senior Developers</h5>
-							<h3 class="cols1">240</h3>
-							<h5>Total Applicants</h5>
-							<br />
-							<footer class="foo3">
-								<br />
-								<h6 class="foo1">38k</h6>
-								<h6 class="foo2">10 min ago</h6>
-
-							</footer>
-						</li>
-					</ul>
-
-
-				</div>
-				<div class="todo">
-					<div class="datepicker">
-						<div class="datepicker-top">
-							<div class="btn-group">
-								<button class="tag">Today</button>
-								<button class="tag">Tomorrow</button>
-								<button class="tag">In 2 days</button>
-							</div>
-							<div class="month-selector">
-
-								<span class="month-name">May 2024</span>
-
+								<div id="meetinguser" class="meetingUserHead"
+									style="width: 800px; margin-bottom: 30px;">
+									<div class="leftSideUser">
+										<div style="border-bottom: 1px solid rgb(214, 214, 214); height: 200px;">
+											<div><img src="./img/user_wo.jpg" class="userImage">
+												<p class="mb-1">Jenita</p>
+												<p>Senior Python Developer</p>
+											</div>
+										</div>
+										<div class="bootomIcon" style="color: rgb(10, 102, 194);">
+											<div style="height: 90%; border-right: 1px solid rgb(10, 102, 194);"><img
+													src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHwSURBVHgB5ZVdctMwEMd3V85M676YG4QbhAsQ+wSkJ0gYqOEt4QQNJ+grUzpT5wicQCFwADgB4QSYh0L48C6rFKdOY8+UkYc+9Pdgybsa/bXSagVwJzk4Wow6R7ZXtbn/MLWDqm3vue0epO+HdXMQ3AAmGXaQtibV/wmgebQ1sDCxAE/r5sDrhr2nNiYyFlrklxQPgiYnS/EYBJauTxScqOUjM2elXxcz1tXfE5bplY1iXfuYuTisjLPGQNQoBAbmq1fJ0nX3UzvT0Jers2ReutXWI6AvF2fxxqbnlgdIeXVcmC7WbePWMRX3SyEfVEh0rqQxImRzEj5b5OCLXDY3yro2aIzo++nDQ/DE3SsSM3L9nYjUEWnjv2WKKSDazLvrFa0AsoQWEDbdRiFB6APiB2gBJIkbhVAwRpE5tIAg9WuFXPF0becnvwFPXCKoVK9WyBVPvcJZniXeyUBM0+pZb9LbRSMCsasI4Mk6GsYhgoz0vmZrYfeJJjZihGMXTRtlBws6d9FcnPZnpW0d0Y9v5lzVdRH8EjwJ03fHKrKzM8Ffx0BTJEcmu5++BT+kKyAvru9MwPR7BgV8vhzjXgfqCeJYRCYa41f4R/Sct56Tktt7JgxC7io7sflUPlptgHXG8IkdMF0VRF9Wr5MM/hd/ACDszvSeCrXmAAAAAElFTkSuQmCC"
+													class="icon">
+												<p>19th Feb 2024</p>
+											</div>
+											<div style="height: 90%;"><svg stroke="currentColor" fill="currentColor"
+													stroke-width="0" version="1.1" id="Layer_1" x="0px" y="0px"
+													viewBox="0 0 30 30" class="icon" height="1em" width="1em"
+													xmlns="http://www.w3.org/2000/svg">
+													<path d="M3.74,14.47c0-2.04,0.51-3.93,1.52-5.66s2.38-3.1,4.11-4.11s3.61-1.51,5.64-1.51c1.52,0,2.98,0.3,4.37,0.89
+				s2.58,1.4,3.59,2.4s1.81,2.2,2.4,3.6s0.89,2.85,0.89,4.39c0,1.52-0.3,2.98-0.89,4.37s-1.4,2.59-2.4,3.59s-2.2,1.8-3.59,2.39
+				s-2.84,0.89-4.37,0.89c-1.53,0-3-0.3-4.39-0.89s-2.59-1.4-3.6-2.4s-1.8-2.2-2.4-3.58S3.74,16,3.74,14.47z M6.22,14.47
+				c0,2.37,0.86,4.43,2.59,6.18c1.73,1.73,3.79,2.59,6.2,2.59c1.58,0,3.05-0.39,4.39-1.18s2.42-1.85,3.21-3.2s1.19-2.81,1.19-4.39
+				s-0.4-3.05-1.19-4.4s-1.86-2.42-3.21-3.21s-2.81-1.18-4.39-1.18s-3.05,0.39-4.39,1.18S8.2,8.72,7.4,10.07S6.22,12.89,6.22,14.47z
+				 M14.14,14.47V7.81c0-0.23,0.08-0.43,0.24-0.59s0.36-0.24,0.59-0.24s0.43,0.08,0.59,0.24s0.24,0.36,0.24,0.59v6.15l3.59,2.09
+				c0.2,0.12,0.32,0.29,0.38,0.51s0.03,0.43-0.09,0.62c-0.16,0.28-0.4,0.42-0.72,0.42c-0.17,0-0.31-0.04-0.42-0.12l-3.82-2.23
+				c-0.17-0.05-0.31-0.15-0.42-0.29S14.14,14.66,14.14,14.47z"></path>
+												</svg>
+												<p>10.30 A.M</p>
+											</div>
+										</div>
+										<div></div>
+									</div>
+									<div class="rightSideInterview">
+										<div class="tableCard ">
+											<div class="table_data rightBorder">
+												<p>1st level: 7/10</p>
+											</div>
+											<div class="table_data">
+												<p>Interviewer: Stella</p>
+											</div>
+										</div>
+										<div class="tableCard">
+											<div class="table_data rightBorder">
+												<p>2nd level: 6/10</p>
+											</div>
+											<div class="table_data ">
+												<p>Interviewer: Smith</p>
+											</div>
+										</div>
+										<div class="tableCard">
+											<div class="table_data rightBorder">
+												<p>3rd level: Waiting</p>
+											</div>
+											<div class="table_data">
+												<p>Interviewer: <span style="color: rgb(10, 102, 194);">Stephan</span>
+												</p>
+											</div>
+										</div>
+										<div class="tableCard">
+											<div class="table_data rightBorder">
+												<p>Meet via: G-Meet</p>
+											</div>
+											<div class="table_data">
+												<p>Interviewer: Johnson</p>
+											</div>
+										</div>
+										<div class="bottomButton">
+											<div style="margin-right: 5px; text-align: end;"><button type="button"
+													class="button-width unfill btn btn-primary">Reschedule
+													Meeting</button></div>
+											<div style="margin-left: 5px; text-align: justify;"><button type="button"
+													class="button-width ml-2 btn btn-primary">Join Meeting</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div id="meetinguser" class="meetingUserHead"
+									style="width: 800px; margin-bottom: 30px;">
+									<div class="leftSideUser">
+										<div style="border-bottom: 1px solid rgb(214, 214, 214); height: 200px;">
+											<div><img src="./img/user.jpg" class="userImage">
+												<p class="mb-1">Sanjith</p>
+												<p>Senior Python Developer</p>
+											</div>
+										</div>
+										<div class="bootomIcon" style="color: rgb(10, 102, 194);">
+											<div style="height: 90%; border-right: 1px solid rgb(10, 102, 194);"><img
+													src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHwSURBVHgB5ZVdctMwEMd3V85M676YG4QbhAsQ+wSkJ0gYqOEt4QQNJ+grUzpT5wicQCFwADgB4QSYh0L48C6rFKdOY8+UkYc+9Pdgybsa/bXSagVwJzk4Wow6R7ZXtbn/MLWDqm3vue0epO+HdXMQ3AAmGXaQtibV/wmgebQ1sDCxAE/r5sDrhr2nNiYyFlrklxQPgiYnS/EYBJauTxScqOUjM2elXxcz1tXfE5bplY1iXfuYuTisjLPGQNQoBAbmq1fJ0nX3UzvT0Jers2ReutXWI6AvF2fxxqbnlgdIeXVcmC7WbePWMRX3SyEfVEh0rqQxImRzEj5b5OCLXDY3yro2aIzo++nDQ/DE3SsSM3L9nYjUEWnjv2WKKSDazLvrFa0AsoQWEDbdRiFB6APiB2gBJIkbhVAwRpE5tIAg9WuFXPF0becnvwFPXCKoVK9WyBVPvcJZniXeyUBM0+pZb9LbRSMCsasI4Mk6GsYhgoz0vmZrYfeJJjZihGMXTRtlBws6d9FcnPZnpW0d0Y9v5lzVdRH8EjwJ03fHKrKzM8Ffx0BTJEcmu5++BT+kKyAvru9MwPR7BgV8vhzjXgfqCeJYRCYa41f4R/Sct56Tktt7JgxC7io7sflUPlptgHXG8IkdMF0VRF9Wr5MM/hd/ACDszvSeCrXmAAAAAElFTkSuQmCC"
+													class="icon">
+												<p>19th Feb 2024</p>
+											</div>
+											<div style="height: 90%;"><svg stroke="currentColor" fill="currentColor"
+													stroke-width="0" version="1.1" id="Layer_1" x="0px" y="0px"
+													viewBox="0 0 30 30" class="icon" height="1em" width="1em"
+													xmlns="http://www.w3.org/2000/svg">
+													<path d="M3.74,14.47c0-2.04,0.51-3.93,1.52-5.66s2.38-3.1,4.11-4.11s3.61-1.51,5.64-1.51c1.52,0,2.98,0.3,4.37,0.89
+				s2.58,1.4,3.59,2.4s1.81,2.2,2.4,3.6s0.89,2.85,0.89,4.39c0,1.52-0.3,2.98-0.89,4.37s-1.4,2.59-2.4,3.59s-2.2,1.8-3.59,2.39
+				s-2.84,0.89-4.37,0.89c-1.53,0-3-0.3-4.39-0.89s-2.59-1.4-3.6-2.4s-1.8-2.2-2.4-3.58S3.74,16,3.74,14.47z M6.22,14.47
+				c0,2.37,0.86,4.43,2.59,6.18c1.73,1.73,3.79,2.59,6.2,2.59c1.58,0,3.05-0.39,4.39-1.18s2.42-1.85,3.21-3.2s1.19-2.81,1.19-4.39
+				s-0.4-3.05-1.19-4.4s-1.86-2.42-3.21-3.21s-2.81-1.18-4.39-1.18s-3.05,0.39-4.39,1.18S8.2,8.72,7.4,10.07S6.22,12.89,6.22,14.47z
+				 M14.14,14.47V7.81c0-0.23,0.08-0.43,0.24-0.59s0.36-0.24,0.59-0.24s0.43,0.08,0.59,0.24s0.24,0.36,0.24,0.59v6.15l3.59,2.09
+				c0.2,0.12,0.32,0.29,0.38,0.51s0.03,0.43-0.09,0.62c-0.16,0.28-0.4,0.42-0.72,0.42c-0.17,0-0.31-0.04-0.42-0.12l-3.82-2.23
+				c-0.17-0.05-0.31-0.15-0.42-0.29S14.14,14.66,14.14,14.47z"></path>
+												</svg>
+												<p>10.30 A.M</p>
+											</div>
+										</div>
+										<div></div>
+									</div>
+									<div class="rightSideInterview">
+										<div class="tableCard ">
+											<div class="table_data rightBorder">
+												<p>1st level: 7/10</p>
+											</div>
+											<div class="table_data">
+												<p>Interviewer: Stella</p>
+											</div>
+										</div>
+										<div class="tableCard">
+											<div class="table_data rightBorder">
+												<p>2nd level: 6/10</p>
+											</div>
+											<div class="table_data ">
+												<p>Interviewer: Smith</p>
+											</div>
+										</div>
+										<div class="tableCard">
+											<div class="table_data rightBorder">
+												<p>3rd level: Waiting</p>
+											</div>
+											<div class="table_data">
+												<p>Interviewer: <span style="color: rgb(10, 102, 194);">Stephan</span>
+												</p>
+											</div>
+										</div>
+										<div class="tableCard">
+											<div class="table_data rightBorder">
+												<p>Meet via: G-Meet</p>
+											</div>
+											<div class="table_data">
+												<p>Interviewer: Johnson</p>
+											</div>
+										</div>
+										<div class="bottomButton">
+											<div style="margin-right: 5px; text-align: end;"><button type="button"
+													class="button-width unfill btn btn-primary">Reschedule
+													Meeting</button></div>
+											<div style="margin-left: 5px; text-align: justify;"><button type="button"
+													class="button-width ml-2 btn btn-primary">Join Meeting</button>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="datepicker-calendar">
-							<span class="day">Mo</span>
-							<span class="day">Tu</span>
-							<span class="day">We</span>
-							<span class="day">Th</span>
-							<span class="day">Fr</span>
-							<span class="day">Sa</span>
-							<span class="day">Su</span>
-							<button class="date faded">30</button>
-							<button class="date">1</button>
-							<button class="date">2</button>
-							<button class="date">3</button>
-							<button class="date">4</button>
-							<button class="date">5</button>
-							<button class="date">6</button>
-							<button class="date">7</button>
-							<button class="date">8</button>
-							<button class="date current-day">9</button>
-							<button class="date">10</button>
-							<button class="date">11</button>
-							<button class="date">12</button>
-							<button class="date">13</button>
-							<button class="date">14</button>
-							<button class="date">15</button>
-							<button class="date">16</button>
-							<button class="date">17</button>
-							<button class="date">18</button>
-							<button class="date">19</button>
-							<button class="date">20</button>
-							<button class="date">21</button>
-							<button class="date">22</button>
-							<button class="date">23</button>
-							<button class="date">24</button>
-							<button class="date">25</button>
-							<button class="date">26</button>
-							<button class="date">27</button>
-							<button class="date">28</button>
-							<button class="date">29</button>
-							<button class="date">30</button>
-							<button class="date">31</button>
-							<button class="date faded">1</button>
-							<button class="date faded">2</button>
-							<button class="date faded">3</button>
+					</div>
+					<div class="postJob">
+						<div class="postHeader">
+							<div class="filter-header">
+								<div class="light-tittle">
+									<p class="titles">Posted Jobs</p>
+									<p style="font-size: 16px; color: rgb(10, 102, 194); text-decoration: underline;">
+										View All</p>
+								</div>
+								<div class="left-filter">
+									<div class="input-div"><input placeholder="Search" class="inptxt" type="text"
+											fdprocessedid="ow966j"><svg stroke="currentColor" fill="currentColor"
+											stroke-width="0" viewBox="0 0 512 512" class="search-icon" height="1em"
+											width="1em" xmlns="http://www.w3.org/2000/svg">
+											<path fill="none" stroke-miterlimit="10" stroke-width="32"
+												d="M221.09 64a157.09 157.09 0 1 0 157.09 157.09A157.1 157.1 0 0 0 221.09 64z">
+											</path>
+											<path fill="none" stroke-linecap="round" stroke-miterlimit="10"
+												stroke-width="32" d="M338.29 338.29 448 448"></path>
+										</svg></div>
+									<div class="filter"><svg stroke="currentColor" fill="currentColor" stroke-width="0"
+											viewBox="0 0 512 512" class="filter_icon" height="1em" width="1em"
+											xmlns="http://www.w3.org/2000/svg">
+											<path d="M16 120h480v48H16zm80 112h320v48H96zm96 112h128v48H192z"></path>
+										</svg><span>Filters</span></div>
+								</div>
+							</div>
+						</div>
+						<div class="tap">
+							<div class="firstChild">Active Jobs</div>
+							<div class="secoundChild">Pending Jobs</div>
+						</div>
+						<div class="overAllCard" style="grid-template-columns: repeat(4, 1fr);">
+							<div class="jobcard">
+								<div class="jobhead"><img src="./img/python_logo.png"
+										style="width: 20px; height: 20px; margin-top: 5px;">
+									<p style="text-align: start;">Python Developers</p><svg stroke="currentColor"
+										fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em"
+										width="1em" xmlns="http://www.w3.org/2000/svg">
+										<g id="Menu_Kebab">
+											<path
+												d="M14.5,12c0,1.38 -1.12,2.5 -2.5,2.5c-1.38,-0 -2.5,-1.12 -2.5,-2.5c0,-1.38 1.12,-2.5 2.5,-2.5c1.38,-0 2.5,1.12 2.5,2.5Zm-1,-0c0,-0.828 -0.672,-1.5 -1.5,-1.5c-0.828,-0 -1.5,0.672 -1.5,1.5c0,0.828 0.672,1.5 1.5,1.5c0.828,-0 1.5,-0.672 1.5,-1.5Z">
+											</path>
+											<path
+												d="M14.5,4.563c0,1.38 -1.12,2.5 -2.5,2.5c-1.38,-0 -2.5,-1.12 -2.5,-2.5c0,-1.38 1.12,-2.5 2.5,-2.5c1.38,-0 2.5,1.12 2.5,2.5Zm-1,-0c0,-0.828 -0.672,-1.5 -1.5,-1.5c-0.828,-0 -1.5,0.672 -1.5,1.5c0,0.828 0.672,1.5 1.5,1.5c0.828,-0 1.5,-0.672 1.5,-1.5Z">
+											</path>
+											<path
+												d="M14.5,19.437c0,1.38 -1.12,2.5 -2.5,2.5c-1.38,0 -2.5,-1.12 -2.5,-2.5c0,-1.38 1.12,-2.5 2.5,-2.5c1.38,0 2.5,1.12 2.5,2.5Zm-1,0c0,-0.828 -0.672,-1.5 -1.5,-1.5c-0.828,0 -1.5,0.672 -1.5,1.5c0,0.828 0.672,1.5 1.5,1.5c0.828,0 1.5,-0.672 1.5,-1.5Z">
+											</path>
+										</g>
+									</svg>
+								</div>
+								<div class="jobmiddle">
+									<p style="padding-top: 10px;">Senior Developer</p>
+									<div class="count"
+										style="background-color: rgb(217, 228, 239); color: rgb(10, 102, 194);">258
+									</div>
+									<p>Total Applications</p>
+								</div>
+								<div class="jobbottom">
+									<div><svg stroke="currentColor" fill="currentColor" stroke-width="0"
+											viewBox="0 0 512 512" height="1em" width="1em"
+											xmlns="http://www.w3.org/2000/svg"
+											style="color: rgb(10, 102, 194); width: 30px; height: 30px;">
+											<path
+												d="M348.3 216.4c-5 5.1-13.3 5.1-18.4.1L269 155.8v231.3c0 7.1-5.8 12.9-13 12.9s-13-5.8-13-12.9V155.8l-60.9 60.8c-5.1 5-13.3 4.9-18.4-.1-5-5.1-5-13.2.1-18.3l83-82.4c1.2-1.1 2.5-2 4.1-2.7 1.6-.7 3.3-1 5-1 3.4 0 6.6 1.3 9.1 3.7l83 82.4c5.2 4.9 5.3 13.1.3 18.2z">
+											</path>
+										</svg><span style="color: rgb(10, 102, 194);">28% </span><span>vs Last
+											month</span></div>
+									<div>6 min ago</div>
+								</div>
+							</div>
+							<div class="jobcard">
+								<div class="jobhead"><img src="./img/anguler_img.png"
+										style="width: 20px; height: 20px; margin-top: 5px;">
+									<p style="text-align: start;">Angular Developers</p><svg stroke="currentColor"
+										fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em"
+										width="1em" xmlns="http://www.w3.org/2000/svg">
+										<g id="Menu_Kebab">
+											<path
+												d="M14.5,12c0,1.38 -1.12,2.5 -2.5,2.5c-1.38,-0 -2.5,-1.12 -2.5,-2.5c0,-1.38 1.12,-2.5 2.5,-2.5c1.38,-0 2.5,1.12 2.5,2.5Zm-1,-0c0,-0.828 -0.672,-1.5 -1.5,-1.5c-0.828,-0 -1.5,0.672 -1.5,1.5c0,0.828 0.672,1.5 1.5,1.5c0.828,-0 1.5,-0.672 1.5,-1.5Z">
+											</path>
+											<path
+												d="M14.5,4.563c0,1.38 -1.12,2.5 -2.5,2.5c-1.38,-0 -2.5,-1.12 -2.5,-2.5c0,-1.38 1.12,-2.5 2.5,-2.5c1.38,-0 2.5,1.12 2.5,2.5Zm-1,-0c0,-0.828 -0.672,-1.5 -1.5,-1.5c-0.828,-0 -1.5,0.672 -1.5,1.5c0,0.828 0.672,1.5 1.5,1.5c0.828,-0 1.5,-0.672 1.5,-1.5Z">
+											</path>
+											<path
+												d="M14.5,19.437c0,1.38 -1.12,2.5 -2.5,2.5c-1.38,0 -2.5,-1.12 -2.5,-2.5c0,-1.38 1.12,-2.5 2.5,-2.5c1.38,0 2.5,1.12 2.5,2.5Zm-1,0c0,-0.828 -0.672,-1.5 -1.5,-1.5c-0.828,0 -1.5,0.672 -1.5,1.5c0,0.828 0.672,1.5 1.5,1.5c0.828,0 1.5,-0.672 1.5,-1.5Z">
+											</path>
+										</g>
+									</svg>
+								</div>
+								<div class="jobmiddle">
+									<p style="padding-top: 10px;">Senior Developer</p>
+									<div class="count"
+										style="background-color: rgb(115, 161, 251); color: rgb(255, 255, 255);">258
+									</div>
+									<p>Total Applications</p>
+								</div>
+								<div class="jobbottom">
+									<div><svg stroke="currentColor" fill="currentColor" stroke-width="0"
+											viewBox="0 0 512 512" height="1em" width="1em"
+											xmlns="http://www.w3.org/2000/svg"
+											style="color: rgb(10, 102, 194); width: 30px; height: 30px;">
+											<path
+												d="M348.3 216.4c-5 5.1-13.3 5.1-18.4.1L269 155.8v231.3c0 7.1-5.8 12.9-13 12.9s-13-5.8-13-12.9V155.8l-60.9 60.8c-5.1 5-13.3 4.9-18.4-.1-5-5.1-5-13.2.1-18.3l83-82.4c1.2-1.1 2.5-2 4.1-2.7 1.6-.7 3.3-1 5-1 3.4 0 6.6 1.3 9.1 3.7l83 82.4c5.2 4.9 5.3 13.1.3 18.2z">
+											</path>
+										</svg><span style="color: rgb(10, 102, 194);">28% </span><span>vs Last
+											month</span></div>
+									<div>6 min ago</div>
+								</div>
+							</div>
+							<div class="jobcard">
+								<div class="jobhead"><img src="./img/java.png"
+										style="width: 20px; height: 20px; margin-top: 5px;">
+									<p style="text-align: start;">Java Developers</p><svg stroke="currentColor"
+										fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em"
+										width="1em" xmlns="http://www.w3.org/2000/svg">
+										<g id="Menu_Kebab">
+											<path
+												d="M14.5,12c0,1.38 -1.12,2.5 -2.5,2.5c-1.38,-0 -2.5,-1.12 -2.5,-2.5c0,-1.38 1.12,-2.5 2.5,-2.5c1.38,-0 2.5,1.12 2.5,2.5Zm-1,-0c0,-0.828 -0.672,-1.5 -1.5,-1.5c-0.828,-0 -1.5,0.672 -1.5,1.5c0,0.828 0.672,1.5 1.5,1.5c0.828,-0 1.5,-0.672 1.5,-1.5Z">
+											</path>
+											<path
+												d="M14.5,4.563c0,1.38 -1.12,2.5 -2.5,2.5c-1.38,-0 -2.5,-1.12 -2.5,-2.5c0,-1.38 1.12,-2.5 2.5,-2.5c1.38,-0 2.5,1.12 2.5,2.5Zm-1,-0c0,-0.828 -0.672,-1.5 -1.5,-1.5c-0.828,-0 -1.5,0.672 -1.5,1.5c0,0.828 0.672,1.5 1.5,1.5c0.828,-0 1.5,-0.672 1.5,-1.5Z">
+											</path>
+											<path
+												d="M14.5,19.437c0,1.38 -1.12,2.5 -2.5,2.5c-1.38,0 -2.5,-1.12 -2.5,-2.5c0,-1.38 1.12,-2.5 2.5,-2.5c1.38,0 2.5,1.12 2.5,2.5Zm-1,0c0,-0.828 -0.672,-1.5 -1.5,-1.5c-0.828,0 -1.5,0.672 -1.5,1.5c0,0.828 0.672,1.5 1.5,1.5c0.828,0 1.5,-0.672 1.5,-1.5Z">
+											</path>
+										</g>
+									</svg>
+								</div>
+								<div class="jobmiddle">
+									<p style="padding-top: 10px;">Senior Developer</p>
+									<div class="count"
+										style="background-color: rgb(47, 115, 160); color: rgb(255, 255, 255);">258
+									</div>
+									<p>Total Applications</p>
+								</div>
+								<div class="jobbottom">
+									<div><svg stroke="currentColor" fill="currentColor" stroke-width="0"
+											viewBox="0 0 512 512" height="1em" width="1em"
+											xmlns="http://www.w3.org/2000/svg"
+											style="color: rgb(10, 102, 194); width: 30px; height: 30px;">
+											<path
+												d="M348.3 216.4c-5 5.1-13.3 5.1-18.4.1L269 155.8v231.3c0 7.1-5.8 12.9-13 12.9s-13-5.8-13-12.9V155.8l-60.9 60.8c-5.1 5-13.3 4.9-18.4-.1-5-5.1-5-13.2.1-18.3l83-82.4c1.2-1.1 2.5-2 4.1-2.7 1.6-.7 3.3-1 5-1 3.4 0 6.6 1.3 9.1 3.7l83 82.4c5.2 4.9 5.3 13.1.3 18.2z">
+											</path>
+										</svg><span style="color: rgb(10, 102, 194);">28% </span><span>vs Last
+											month</span></div>
+									<div>6 min ago</div>
+								</div>
+							</div>
+							<div class="jobcard">
+								<div class="jobhead"><img src="./img/ux_download.png"
+										style="width: 20px; height: 20px; margin-top: 5px;">
+									<p style="text-align: start;">UI/Ux Developers</p><svg stroke="currentColor"
+										fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em"
+										width="1em" xmlns="http://www.w3.org/2000/svg">
+										<g id="Menu_Kebab">
+											<path
+												d="M14.5,12c0,1.38 -1.12,2.5 -2.5,2.5c-1.38,-0 -2.5,-1.12 -2.5,-2.5c0,-1.38 1.12,-2.5 2.5,-2.5c1.38,-0 2.5,1.12 2.5,2.5Zm-1,-0c0,-0.828 -0.672,-1.5 -1.5,-1.5c-0.828,-0 -1.5,0.672 -1.5,1.5c0,0.828 0.672,1.5 1.5,1.5c0.828,-0 1.5,-0.672 1.5,-1.5Z">
+											</path>
+											<path
+												d="M14.5,4.563c0,1.38 -1.12,2.5 -2.5,2.5c-1.38,-0 -2.5,-1.12 -2.5,-2.5c0,-1.38 1.12,-2.5 2.5,-2.5c1.38,-0 2.5,1.12 2.5,2.5Zm-1,-0c0,-0.828 -0.672,-1.5 -1.5,-1.5c-0.828,-0 -1.5,0.672 -1.5,1.5c0,0.828 0.672,1.5 1.5,1.5c0.828,-0 1.5,-0.672 1.5,-1.5Z">
+											</path>
+											<path
+												d="M14.5,19.437c0,1.38 -1.12,2.5 -2.5,2.5c-1.38,0 -2.5,-1.12 -2.5,-2.5c0,-1.38 1.12,-2.5 2.5,-2.5c1.38,0 2.5,1.12 2.5,2.5Zm-1,0c0,-0.828 -0.672,-1.5 -1.5,-1.5c-0.828,0 -1.5,0.672 -1.5,1.5c0,0.828 0.672,1.5 1.5,1.5c0.828,0 1.5,-0.672 1.5,-1.5Z">
+											</path>
+										</g>
+									</svg>
+								</div>
+								<div class="jobmiddle">
+									<p style="padding-top: 10px;">Senior Developer</p>
+									<div class="count"
+										style="background-color: rgb(10, 102, 194); color: rgb(255, 255, 255);">258
+									</div>
+									<p>Total Applications</p>
+								</div>
+								<div class="jobbottom">
+									<div><svg stroke="currentColor" fill="currentColor" stroke-width="0"
+											viewBox="0 0 512 512" height="1em" width="1em"
+											xmlns="http://www.w3.org/2000/svg"
+											style="color: rgb(10, 102, 194); width: 30px; height: 30px;">
+											<path
+												d="M348.3 216.4c-5 5.1-13.3 5.1-18.4.1L269 155.8v231.3c0 7.1-5.8 12.9-13 12.9s-13-5.8-13-12.9V155.8l-60.9 60.8c-5.1 5-13.3 4.9-18.4-.1-5-5.1-5-13.2.1-18.3l83-82.4c1.2-1.1 2.5-2 4.1-2.7 1.6-.7 3.3-1 5-1 3.4 0 6.6 1.3 9.1 3.7l83 82.4c5.2 4.9 5.3 13.1.3 18.2z">
+											</path>
+										</svg><span style="color: rgb(10, 102, 194);">28% </span><span>vs Last
+											month</span></div>
+									<div>6 min ago</div>
+								</div>
+							</div>
 						</div>
 					</div>
-					<div class="head">
-						<h4>Upcomings</h4>
-
-					</div>
-					<div>
-						<h5 class="todo1">View All</h5>
-					</div>
-
-					<table>
-						<tbody>
-							<tr>
-								<td>
-									<i class='bx bxs-calendar-check'></i>
-									<span>07 Feb</span>
-
-								</td>
-
-								<td class="to3">
-									<h5>Interview with Designer</h5>
-									<h6>Created by <span class="nameups">Stella</span></h6>
-									<h6>10 AM to 11 AM</h6>
-								</td>
-								<td class="to3">
-									<button class="bttodoups">Details</button>
-								</td>
-							</tr>
-
-							<tr>
-								<td>
-									<i class='bx bxs-calendar-check'></i>
-									<span>07 Feb</span>
-
-								</td>
-
-								<td class="to3">
-									<h5>Interview with PMO</h5>
-									<h6>Created by <span class="nameups">Stellphan</span></h6>
-									<h6>10 AM to 11 AM</h6>
-								</td>
-								<td class="to3">
-									<button class="bttodoups">Details</button>
-								</td>
-							</tr>
-
-							<tr>
-								<td>
-									<i class='bx bxs-calendar-check'></i>
-									<span>07 Feb</span>
-
-								</td>
-
-								<td class="to3">
-									<h5>Interview with.Net Admin</h5>
-									<h6>Created by <span class="nameups">Stellphan</span></h6>
-									<h6>1 PM to 2 PM</h6>
-								</td>
-								<td class="to3">
-									<button class="bttodoups">Details</button>
-								</td>
-							</tr>
-
-
-						</tbody>
-					</table>
-					<br />
-
-					<div class="tdata">
-						<div class="head">
-							<h4>Activity</h4>
-
+					<div class="maintable">
+						<div class="filter-header">
+							<div class="light-tittle">
+								<p class="titles">Candiate Status</p>
+								<p style="font-size: 16px; color: rgb(10, 102, 194); text-decoration: underline;">View
+									All</p>
+							</div>
+							<div class="left-filter">
+								<div class="input-div"><input placeholder="Search" class="inptxt" type="text"
+										fdprocessedid="ebb9rj"><svg stroke="currentColor" fill="currentColor"
+										stroke-width="0" viewBox="0 0 512 512" class="search-icon" height="1em"
+										width="1em" xmlns="http://www.w3.org/2000/svg">
+										<path fill="none" stroke-miterlimit="10" stroke-width="32"
+											d="M221.09 64a157.09 157.09 0 1 0 157.09 157.09A157.1 157.1 0 0 0 221.09 64z">
+										</path>
+										<path fill="none" stroke-linecap="round" stroke-miterlimit="10"
+											stroke-width="32" d="M338.29 338.29 448 448"></path>
+									</svg></div>
+								<div class="filter"><svg stroke="currentColor" fill="currentColor" stroke-width="0"
+										viewBox="0 0 512 512" class="filter_icon" height="1em" width="1em"
+										xmlns="http://www.w3.org/2000/svg">
+										<path d="M16 120h480v48H16zm80 112h320v48H96zm96 112h128v48H192z"></path>
+									</svg><span>Filters</span></div>
+							</div>
 						</div>
-						<div>
-							<h5 class="todo1">View All</h5>
-						</div>
-						<table>
+						<table class="cand1tab">
+							<thead class="tcad">
+								<tr>
+									<th class="tpvtab" style="width: 80px;">Job ID</th>
+									<th class="tpvtab" style="width: 180px;">Name</th>
+									<th class="tpvtab" style="width: 140px;">Position</th>
+									<th class="tpvtab" style="width: 140px;">1st Level</th>
+									<th class="tpvtab" style="width: 140px;">2nd Level</th>
+									<th class="tpvtab" style="width: 140px;">3rd Level</th>
+									<th class="tpvtab" style="width: 140px;">4th Level</th>
+									<th class="tpvtab" style="width: 140px;">Total Marks</th>
+									<th class="tpvtab" style="width: 140px;">Status</th>
+									<th class="tpvtab" style="width: 110px;">Actions</th>
+								</tr>
+							</thead>
 							<tbody>
 								<tr>
-									<td>
-										<img src="img/people.png" class="todimg">
-
+									<td class="tpvtab" style="width: 80px;">#001</td>
+									<td class="tpvtab" style="width: 180px;">Rajesh</td>
+									<td class="tpvtab" style="width: 140px;">Designer</td>
+									<td class="tpvtab" style="width: 140px;">7/10</td>
+									<td class="tpvtab" style="width: 140px;">7/10</td>
+									<td class="tpvtab" style="width: 140px;">6/10</td>
+									<td class="tpvtab" style="width: 140px;">...</td>
+									<td class="tpvtab" style="width: 140px;">...</td>
+									<td class="tpvtab" style="width: 140px;">
+										<div class="status-div">
+											<p class="Active"><span>Active</span></p>
+										</div>
 									</td>
-
-									<td class="to3">
-										<h5>John Doe<span class="nameups">[Python Developer]</span></h5>
-										<h6>Interview with robert</h6>
-										<h6>10 min ago</h6>
-									</td>
-
+									<td style="width: 110px;"><svg stroke="currentColor" fill="currentColor"
+											stroke-width="0" viewBox="0 0 576 512" height="1em" width="1em"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M288 80c-65.2 0-118.8 29.6-159.9 67.7C89.6 183.5 63 226 49.4 256c13.6 30 40.2 72.5 78.6 108.3C169.2 402.4 222.8 432 288 432s118.8-29.6 159.9-67.7C486.4 328.5 513 286 526.6 256c-13.6-30-40.2-72.5-78.6-108.3C406.8 109.6 353.2 80 288 80zM95.4 112.6C142.5 68.8 207.2 32 288 32s145.5 36.8 192.6 80.6c46.8 43.5 78.1 95.4 93 131.1c3.3 7.9 3.3 16.7 0 24.6c-14.9 35.7-46.2 87.7-93 131.1C433.5 443.2 368.8 480 288 480s-145.5-36.8-192.6-80.6C48.6 356 17.3 304 2.5 268.3c-3.3-7.9-3.3-16.7 0-24.6C17.3 208 48.6 156 95.4 112.6zM288 336c44.2 0 80-35.8 80-80s-35.8-80-80-80c-.7 0-1.3 0-2 0c1.3 5.1 2 10.5 2 16c0 35.3-28.7 64-64 64c-5.5 0-10.9-.7-16-2c0 .7 0 1.3 0 2c0 44.2 35.8 80 80 80zm0-208a128 128 0 1 1 0 256 128 128 0 1 1 0-256z">
+											</path>
+										</svg></td>
 								</tr>
-
 								<tr>
-									<td>
-										<img src="img/people.png" class="todimg">
-
+									<td class="tpvtab" style="width: 80px;">#002</td>
+									<td class="tpvtab" style="width: 180px;">Murugan</td>
+									<td class="tpvtab" style="width: 140px;">Web Developer</td>
+									<td class="tpvtab" style="width: 140px;">9/10</td>
+									<td class="tpvtab" style="width: 140px;">8/10</td>
+									<td class="tpvtab" style="width: 140px;">8/10</td>
+									<td class="tpvtab" style="width: 140px;">7/10</td>
+									<td class="tpvtab" style="width: 140px;">32/40</td>
+									<td class="tpvtab" style="width: 140px;">
+										<div class="status-div">
+											<p class="Hired"><span>Hired</span></p>
+										</div>
 									</td>
-
-									<td class="to3">
-										<h5>John Doe<span class="nameups">[Python Developer]</span></h5>
-										<h6>Senior Python Developer</h6>
-										<h6>Hired by salmi</h6>
-									</td>
+									<td style="width: 110px;"><svg stroke="currentColor" fill="currentColor"
+											stroke-width="0" viewBox="0 0 576 512" height="1em" width="1em"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M288 80c-65.2 0-118.8 29.6-159.9 67.7C89.6 183.5 63 226 49.4 256c13.6 30 40.2 72.5 78.6 108.3C169.2 402.4 222.8 432 288 432s118.8-29.6 159.9-67.7C486.4 328.5 513 286 526.6 256c-13.6-30-40.2-72.5-78.6-108.3C406.8 109.6 353.2 80 288 80zM95.4 112.6C142.5 68.8 207.2 32 288 32s145.5 36.8 192.6 80.6c46.8 43.5 78.1 95.4 93 131.1c3.3 7.9 3.3 16.7 0 24.6c-14.9 35.7-46.2 87.7-93 131.1C433.5 443.2 368.8 480 288 480s-145.5-36.8-192.6-80.6C48.6 356 17.3 304 2.5 268.3c-3.3-7.9-3.3-16.7 0-24.6C17.3 208 48.6 156 95.4 112.6zM288 336c44.2 0 80-35.8 80-80s-35.8-80-80-80c-.7 0-1.3 0-2 0c1.3 5.1 2 10.5 2 16c0 35.3-28.7 64-64 64c-5.5 0-10.9-.7-16-2c0 .7 0 1.3 0 2c0 44.2 35.8 80 80 80zm0-208a128 128 0 1 1 0 256 128 128 0 1 1 0-256z">
+											</path>
+										</svg></td>
 								</tr>
-
 								<tr>
-									<td>
-										<img src="img/people.png" class="todimg">
-
+									<td class="tpvtab" style="width: 80px;">#003</td>
+									<td class="tpvtab" style="width: 180px;">Theena</td>
+									<td class="tpvtab" style="width: 140px;">Python Developer</td>
+									<td class="tpvtab" style="width: 140px;">7/10</td>
+									<td class="tpvtab" style="width: 140px;">7/10</td>
+									<td class="tpvtab" style="width: 140px;">
+										<div class="reject-div">
+											<p class="reject-box"><span class="reject-text">X</span></p>
+										</div>
 									</td>
-
-									<td class="to3">
-										<h5>John Doe<span class="nameups">[Python Developer]</span></h5>
-										<h6>Senior Python Developer</h6>
-										<h6>Hired by salmi</h6>
+									<td style="width: 140px;">
+										<div class="reject-div">
+											<p class="reject-box"><span class="reject-text">X</span></p>
+										</div>
 									</td>
+									<td style="width: 140px;">20/40</td>
+									<td style="width: 140px;">
+										<div class="status-div">
+											<p class="Reject"><span>Reject</span></p>
+										</div>
+									</td>
+									<td style="width: 110px;"><svg stroke="currentColor" fill="currentColor"
+											stroke-width="0" viewBox="0 0 576 512" height="1em" width="1em"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M288 80c-65.2 0-118.8 29.6-159.9 67.7C89.6 183.5 63 226 49.4 256c13.6 30 40.2 72.5 78.6 108.3C169.2 402.4 222.8 432 288 432s118.8-29.6 159.9-67.7C486.4 328.5 513 286 526.6 256c-13.6-30-40.2-72.5-78.6-108.3C406.8 109.6 353.2 80 288 80zM95.4 112.6C142.5 68.8 207.2 32 288 32s145.5 36.8 192.6 80.6c46.8 43.5 78.1 95.4 93 131.1c3.3 7.9 3.3 16.7 0 24.6c-14.9 35.7-46.2 87.7-93 131.1C433.5 443.2 368.8 480 288 480s-145.5-36.8-192.6-80.6C48.6 356 17.3 304 2.5 268.3c-3.3-7.9-3.3-16.7 0-24.6C17.3 208 48.6 156 95.4 112.6zM288 336c44.2 0 80-35.8 80-80s-35.8-80-80-80c-.7 0-1.3 0-2 0c1.3 5.1 2 10.5 2 16c0 35.3-28.7 64-64 64c-5.5 0-10.9-.7-16-2c0 .7 0 1.3 0 2c0 44.2 35.8 80 80 80zm0-208a128 128 0 1 1 0 256 128 128 0 1 1 0-256z">
+											</path>
+										</svg></td>
 								</tr>
-
-
+								<tr>
+									<td class="tpvtab" style="width: 80px;">#004</td>
+									<td class="tpvtab" style="width: 180px;">Ram</td>
+									<td class="tpvtab" style="width: 140px;">Designer</td>
+									<td class="tpvtab" style="width: 140px;">7/10</td>
+									<td class="tpvtab" style="width: 140px;">7/10</td>
+									<td class="tpvtab" style="width: 140px;">6/10</td>
+									<td class="tpvtab" style="width: 140px;">...</td>
+									<td class="tpvtab" style="width: 140px;">...</td>
+									<td class="tpvtab" style="width: 140px;">
+										<div class="status-div">
+											<p class="Active"><span>Active</span></p>
+										</div>
+									</td>
+									<td style="width: 110px;"><svg stroke="currentColor" fill="currentColor"
+											stroke-width="0" viewBox="0 0 576 512" height="1em" width="1em"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M288 80c-65.2 0-118.8 29.6-159.9 67.7C89.6 183.5 63 226 49.4 256c13.6 30 40.2 72.5 78.6 108.3C169.2 402.4 222.8 432 288 432s118.8-29.6 159.9-67.7C486.4 328.5 513 286 526.6 256c-13.6-30-40.2-72.5-78.6-108.3C406.8 109.6 353.2 80 288 80zM95.4 112.6C142.5 68.8 207.2 32 288 32s145.5 36.8 192.6 80.6c46.8 43.5 78.1 95.4 93 131.1c3.3 7.9 3.3 16.7 0 24.6c-14.9 35.7-46.2 87.7-93 131.1C433.5 443.2 368.8 480 288 480s-145.5-36.8-192.6-80.6C48.6 356 17.3 304 2.5 268.3c-3.3-7.9-3.3-16.7 0-24.6C17.3 208 48.6 156 95.4 112.6zM288 336c44.2 0 80-35.8 80-80s-35.8-80-80-80c-.7 0-1.3 0-2 0c1.3 5.1 2 10.5 2 16c0 35.3-28.7 64-64 64c-5.5 0-10.9-.7-16-2c0 .7 0 1.3 0 2c0 44.2 35.8 80 80 80zm0-208a128 128 0 1 1 0 256 128 128 0 1 1 0-256z">
+											</path>
+										</svg></td>
+								</tr>
+								<tr>
+									<td class="tpvtab" style="width: 80px;">#005</td>
+									<td class="tpvtab" style="width: 180px;">Rajeshkumar</td>
+									<td class="tpvtab" style="width: 140px;">React</td>
+									<td class="tpvtab" style="width: 140px;">7/10</td>
+									<td class="tpvtab" style="width: 140px;">7/10</td>
+									<td class="tpvtab" style="width: 140px;">6/10</td>
+									<td class="tpvtab" style="width: 140px;">8/10</td>
+									<td class="tpvtab" style="width: 140px;">28/40</td>
+									<td class="tpvtab" style="width: 140px;">
+										<div class="status-div">
+											<p class="Hired"><span>Hired</span></p>
+										</div>
+									</td>
+									<td style="width: 110px;"><svg stroke="currentColor" fill="currentColor"
+											stroke-width="0" viewBox="0 0 576 512" height="1em" width="1em"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M288 80c-65.2 0-118.8 29.6-159.9 67.7C89.6 183.5 63 226 49.4 256c13.6 30 40.2 72.5 78.6 108.3C169.2 402.4 222.8 432 288 432s118.8-29.6 159.9-67.7C486.4 328.5 513 286 526.6 256c-13.6-30-40.2-72.5-78.6-108.3C406.8 109.6 353.2 80 288 80zM95.4 112.6C142.5 68.8 207.2 32 288 32s145.5 36.8 192.6 80.6c46.8 43.5 78.1 95.4 93 131.1c3.3 7.9 3.3 16.7 0 24.6c-14.9 35.7-46.2 87.7-93 131.1C433.5 443.2 368.8 480 288 480s-145.5-36.8-192.6-80.6C48.6 356 17.3 304 2.5 268.3c-3.3-7.9-3.3-16.7 0-24.6C17.3 208 48.6 156 95.4 112.6zM288 336c44.2 0 80-35.8 80-80s-35.8-80-80-80c-.7 0-1.3 0-2 0c1.3 5.1 2 10.5 2 16c0 35.3-28.7 64-64 64c-5.5 0-10.9-.7-16-2c0 .7 0 1.3 0 2c0 44.2 35.8 80 80 80zm0-208a128 128 0 1 1 0 256 128 128 0 1 1 0-256z">
+											</path>
+										</svg></td>
+								</tr>
+								<tr>
+									<td class="tpvtab" style="width: 80px;">#006</td>
+									<td class="tpvtab" style="width: 180px;">Fazil</td>
+									<td class="tpvtab" style="width: 140px;">FrontDev</td>
+									<td class="tpvtab" style="width: 140px;">7/10</td>
+									<td class="tpvtab" style="width: 140px;">7/10</td>
+									<td class="tpvtab" style="width: 140px;">6/10</td>
+									<td class="tpvtab" style="width: 140px;">...</td>
+									<td class="tpvtab" style="width: 140px;">...</td>
+									<td class="tpvtab" style="width: 140px;">
+										<div class="status-div">
+											<p class="Reject"><span>Reject</span></p>
+										</div>
+									</td>
+									<td style="width: 110px;"><svg stroke="currentColor" fill="currentColor"
+											stroke-width="0" viewBox="0 0 576 512" height="1em" width="1em"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M288 80c-65.2 0-118.8 29.6-159.9 67.7C89.6 183.5 63 226 49.4 256c13.6 30 40.2 72.5 78.6 108.3C169.2 402.4 222.8 432 288 432s118.8-29.6 159.9-67.7C486.4 328.5 513 286 526.6 256c-13.6-30-40.2-72.5-78.6-108.3C406.8 109.6 353.2 80 288 80zM95.4 112.6C142.5 68.8 207.2 32 288 32s145.5 36.8 192.6 80.6c46.8 43.5 78.1 95.4 93 131.1c3.3 7.9 3.3 16.7 0 24.6c-14.9 35.7-46.2 87.7-93 131.1C433.5 443.2 368.8 480 288 480s-145.5-36.8-192.6-80.6C48.6 356 17.3 304 2.5 268.3c-3.3-7.9-3.3-16.7 0-24.6C17.3 208 48.6 156 95.4 112.6zM288 336c44.2 0 80-35.8 80-80s-35.8-80-80-80c-.7 0-1.3 0-2 0c1.3 5.1 2 10.5 2 16c0 35.3-28.7 64-64 64c-5.5 0-10.9-.7-16-2c0 .7 0 1.3 0 2c0 44.2 35.8 80 80 80zm0-208a128 128 0 1 1 0 256 128 128 0 1 1 0-256z">
+											</path>
+										</svg></td>
+								</tr>
+								<tr>
+									<td class="tpvtab" style="width: 80px;">#008</td>
+									<td class="tpvtab" style="width: 180px;">Elamaran</td>
+									<td class="tpvtab" style="width: 140px;">CMS</td>
+									<td class="tpvtab" style="width: 140px;">7/10</td>
+									<td class="tpvtab" style="width: 140px;">7/10</td>
+									<td class="tpvtab" style="width: 140px;">6/10</td>
+									<td class="tpvtab" style="width: 140px;">...</td>
+									<td class="tpvtab" style="width: 140px;">...</td>
+									<td class="tpvtab" style="width: 140px;">
+										<div class="status-div">
+											<p class="Active"><span>Active</span></p>
+										</div>
+									</td>
+									<td style="width: 110px;"><svg stroke="currentColor" fill="currentColor"
+											stroke-width="0" viewBox="0 0 576 512" height="1em" width="1em"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M288 80c-65.2 0-118.8 29.6-159.9 67.7C89.6 183.5 63 226 49.4 256c13.6 30 40.2 72.5 78.6 108.3C169.2 402.4 222.8 432 288 432s118.8-29.6 159.9-67.7C486.4 328.5 513 286 526.6 256c-13.6-30-40.2-72.5-78.6-108.3C406.8 109.6 353.2 80 288 80zM95.4 112.6C142.5 68.8 207.2 32 288 32s145.5 36.8 192.6 80.6c46.8 43.5 78.1 95.4 93 131.1c3.3 7.9 3.3 16.7 0 24.6c-14.9 35.7-46.2 87.7-93 131.1C433.5 443.2 368.8 480 288 480s-145.5-36.8-192.6-80.6C48.6 356 17.3 304 2.5 268.3c-3.3-7.9-3.3-16.7 0-24.6C17.3 208 48.6 156 95.4 112.6zM288 336c44.2 0 80-35.8 80-80s-35.8-80-80-80c-.7 0-1.3 0-2 0c1.3 5.1 2 10.5 2 16c0 35.3-28.7 64-64 64c-5.5 0-10.9-.7-16-2c0 .7 0 1.3 0 2c0 44.2 35.8 80 80 80zm0-208a128 128 0 1 1 0 256 128 128 0 1 1 0-256z">
+											</path>
+										</svg></td>
+								</tr>
 
 							</tbody>
 						</table>
 					</div>
 				</div>
-
-			</div>
-
-			<div class="table-data">
-				<div class="order">
-					<div class="head">
-						<h3>Candiate Status</h3>
-						<div>
-							<h5 class=>View All</h5>
-						</div>
-						<i class='bx bx-search'></i>
-						<i class='bx bx-filter'></i>
-					</div>
-					<table>
-						<thead>
-							<tr>
-								<th>Job Id</th>
-								<th>Name</th>
-								<th>Position</th>
-								<th>1nd Level</th>
-								<th>2nd Level</th>
-								<th>3nd Level</th>
-								<th>Total marks</th>
-								<th>Status</th>
-
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>
-									<p>#001</p>
-								</td>
-								<td>
-									<p>John Doe</p>
-								</td>
-								<td>Designer</td>
-								<td>6/10</td>
-								<td>7/10</td>
-								<td>8/10</td>
-								<td>21/30</td>
-								<td><span class="status completed">Completed</span></td>
-
-							</tr>
-							<tr>
-								<td>
-									<p>#002</p>
-								</td>
-								<td>
-									<p>John wick</p>
-								</td>
-								<td>SDE</td>
-								<td>6/10</td>
-								<td>9/10</td>
-								<td>8/10</td>
-								<td>24/30</td>
-								<td><span class="status pending">Pending</span></td>
-
-							</tr>
-							<tr>
-								<td>
-									<p>#003</p>
-								</td>
-								<td>
-									<p>Victor</p>
-								</td>
-								<td>Devops</td>
-								<td>6/10</td>
-								<td>7/10</td>
-								<td>8/10</td>
-								<td>21/30</td>
-								<td><span class="status process">Process</span></td>
-
-							</tr>
-							<tr>
-								<td>
-									<p>#004</p>
-								</td>
-								<td>
-									<p>Prasad</p>
-								</td>
-								<td>Manager</td>
-								<td>9/10</td>
-								<td>9/10</td>
-								<td>9/10</td>
-								<td>27/30</td>
-								<td><span class="status completed">Completed</span></td>
-
-							</tr>
-						</tbody>
-					</table>
-				</div>
-				<div class="todo">
-					<div class="head">
-						<h4>Hiring Candiates</h4>
-
-					</div>
+				<div>
 					<div>
-						<h5 class="todo1">View Details</h5>
+						<div class="react-calendar">
+							<div class="react-calendar__navigation"><button aria-label=""
+									class="react-calendar__navigation__arrow react-calendar__navigation__prev2-button"
+									type="button" fdprocessedid="86t2l7">«</button><button aria-label=""
+									class="react-calendar__navigation__arrow react-calendar__navigation__prev-button"
+									type="button" fdprocessedid="vqqx6">‹</button><button aria-label=""
+									class="react-calendar__navigation__label" type="button" fdprocessedid="ouj19e"
+									style="flex-grow: 1;"><span
+										class="react-calendar__navigation__label__labelText react-calendar__navigation__label__labelText--from">May
+										2024</span></button><button aria-label=""
+									class="react-calendar__navigation__arrow react-calendar__navigation__next-button"
+									type="button" fdprocessedid="7rjzc">›</button><button aria-label=""
+									class="react-calendar__navigation__arrow react-calendar__navigation__next2-button"
+									type="button" fdprocessedid="nc37xt">»</button></div>
+							<div class="react-calendar__viewContainer">
+								<div class="react-calendar__month-view">
+									<div style="display: flex; align-items: flex-end;">
+										<div style="flex-grow: 1; width: 100%;">
+											<div class="react-calendar__month-view__weekdays"
+												style="display: flex; flex-wrap: nowrap;">
+												<div class="react-calendar__month-view__weekdays__weekday"
+													style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;">
+													<abbr aria-label="Monday" title="Monday">Mon</abbr></div>
+												<div class="react-calendar__month-view__weekdays__weekday"
+													style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;">
+													<abbr aria-label="Tuesday" title="Tuesday">Tue</abbr></div>
+												<div class="react-calendar__month-view__weekdays__weekday react-calendar__month-view__weekdays__weekday--current"
+													style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;">
+													<abbr aria-label="Wednesday" title="Wednesday">Wed</abbr></div>
+												<div class="react-calendar__month-view__weekdays__weekday"
+													style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;">
+													<abbr aria-label="Thursday" title="Thursday">Thu</abbr></div>
+												<div class="react-calendar__month-view__weekdays__weekday"
+													style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;">
+													<abbr aria-label="Friday" title="Friday">Fri</abbr></div>
+												<div class="react-calendar__month-view__weekdays__weekday react-calendar__month-view__weekdays__weekday--weekend"
+													style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;">
+													<abbr aria-label="Saturday" title="Saturday">Sat</abbr></div>
+												<div class="react-calendar__month-view__weekdays__weekday react-calendar__month-view__weekdays__weekday--weekend"
+													style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;">
+													<abbr aria-label="Sunday" title="Sunday">Sun</abbr></div>
+											</div>
+											<div class="react-calendar__month-view__days"
+												style="display: flex; flex-wrap: wrap;">
+												<button
+													class="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--neighboringMonth"
+													type="button" fdprocessedid="hakxul"
+													style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr
+														aria-label="April 29, 2024">29</abbr></button><button
+													class="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--neighboringMonth"
+													type="button" fdprocessedid="4vlda"
+													style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr
+														aria-label="April 30, 2024">30</abbr></button><button
+													class="react-calendar__tile react-calendar__month-view__days__day"
+													type="button" fdprocessedid="p765fg"
+													style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr
+														aria-label="May 1, 2024">1</abbr></button><button
+													class="react-calendar__tile react-calendar__month-view__days__day"
+													type="button" fdprocessedid="fbio8i"
+													style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr
+														aria-label="May 2, 2024">2</abbr></button><button
+													class="react-calendar__tile react-calendar__month-view__days__day"
+													type="button" fdprocessedid="h4lxdp"
+													style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr
+														aria-label="May 3, 2024">3</abbr></button><button
+													class="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
+													type="button" fdprocessedid="wteoq"
+													style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr
+														aria-label="May 4, 2024">4</abbr></button><button
+													class="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
+													type="button" fdprocessedid="q4wq1c"
+													style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr
+														aria-label="May 5, 2024">5</abbr></button><button
+													class="react-calendar__tile react-calendar__month-view__days__day"
+													type="button" fdprocessedid="pflr2q"
+													style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr
+														aria-label="May 6, 2024">6</abbr></button><button
+													class="react-calendar__tile react-calendar__month-view__days__day"
+													type="button" fdprocessedid="gly1q6"
+													style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr
+														aria-label="May 7, 2024">7</abbr></button><button
+													class="react-calendar__tile react-calendar__month-view__days__day"
+													type="button" fdprocessedid="najc5n"
+													style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr
+														aria-label="May 8, 2024">8</abbr></button><button
+													class="react-calendar__tile react-calendar__month-view__days__day"
+													type="button" fdprocessedid="ob1rw"
+													style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr
+														aria-label="May 9, 2024">9</abbr></button><button
+													class="react-calendar__tile react-calendar__month-view__days__day"
+													type="button" fdprocessedid="33z2ev"
+													style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr
+														aria-label="May 10, 2024">10</abbr></button><button
+													class="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
+													type="button" fdprocessedid="u97c3a"
+													style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr
+														aria-label="May 11, 2024">11</abbr></button><button
+													class="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
+													type="button" fdprocessedid="4m69a"
+													style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr
+														aria-label="May 12, 2024">12</abbr></button><button
+													class="react-calendar__tile react-calendar__month-view__days__day"
+													type="button" fdprocessedid="ain0y"
+													style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr
+														aria-label="May 13, 2024">13</abbr></button><button
+													class="react-calendar__tile react-calendar__month-view__days__day"
+													type="button" fdprocessedid="0kc0vh"
+													style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr
+														aria-label="May 14, 2024">14</abbr></button><button
+													class="react-calendar__tile react-calendar__tile--now react-calendar__month-view__days__day"
+													type="button" fdprocessedid="5wdjp"
+													style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr
+														aria-label="May 15, 2024">15</abbr></button><button
+													class="react-calendar__tile react-calendar__month-view__days__day"
+													type="button" fdprocessedid="5vouwh"
+													style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr
+														aria-label="May 16, 2024">16</abbr></button><button
+													class="react-calendar__tile react-calendar__month-view__days__day"
+													type="button" fdprocessedid="pxxnmd"
+													style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr
+														aria-label="May 17, 2024">17</abbr></button><button
+													class="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
+													type="button" fdprocessedid="h0jytf"
+													style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr
+														aria-label="May 18, 2024">18</abbr></button><button
+													class="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
+													type="button" fdprocessedid="pzaghh"
+													style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr
+														aria-label="May 19, 2024">19</abbr></button><button
+													class="react-calendar__tile react-calendar__month-view__days__day"
+													type="button" fdprocessedid="gwxk0g"
+													style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr
+														aria-label="May 20, 2024">20</abbr></button><button
+													class="react-calendar__tile react-calendar__month-view__days__day"
+													type="button" fdprocessedid="tlpt7p"
+													style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr
+														aria-label="May 21, 2024">21</abbr></button><button
+													class="react-calendar__tile react-calendar__month-view__days__day"
+													type="button" fdprocessedid="kxc4gd"
+													style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr
+														aria-label="May 22, 2024">22</abbr></button><button
+													class="react-calendar__tile react-calendar__month-view__days__day"
+													type="button" fdprocessedid="9hlv2t"
+													style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr
+														aria-label="May 23, 2024">23</abbr></button><button
+													class="react-calendar__tile react-calendar__month-view__days__day"
+													type="button" fdprocessedid="p23bvq"
+													style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr
+														aria-label="May 24, 2024">24</abbr></button><button
+													class="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
+													type="button" fdprocessedid="b55ug"
+													style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr
+														aria-label="May 25, 2024">25</abbr></button><button
+													class="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend"
+													type="button" fdprocessedid="tc1wvg"
+													style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr
+														aria-label="May 26, 2024">26</abbr></button><button
+													class="react-calendar__tile react-calendar__month-view__days__day"
+													type="button" fdprocessedid="0fll7"
+													style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr
+														aria-label="May 27, 2024">27</abbr></button><button
+													class="react-calendar__tile react-calendar__month-view__days__day"
+													type="button" fdprocessedid="a8wox4"
+													style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr
+														aria-label="May 28, 2024">28</abbr></button><button
+													class="react-calendar__tile react-calendar__month-view__days__day"
+													type="button" fdprocessedid="lri2f7"
+													style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr
+														aria-label="May 29, 2024">29</abbr></button><button
+													class="react-calendar__tile react-calendar__month-view__days__day"
+													type="button" fdprocessedid="581q9n"
+													style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr
+														aria-label="May 30, 2024">30</abbr></button><button
+													class="react-calendar__tile react-calendar__month-view__days__day"
+													type="button" fdprocessedid="3fboej"
+													style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr
+														aria-label="May 31, 2024">31</abbr></button><button
+													class="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend react-calendar__month-view__days__day--neighboringMonth"
+													type="button" fdprocessedid="pe7u2"
+													style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr
+														aria-label="June 1, 2024">1</abbr></button><button
+													class="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend react-calendar__month-view__days__day--neighboringMonth"
+													type="button" fdprocessedid="41jnec"
+													style="flex: 0 0 14.2857%; overflow: hidden; margin-inline-end: 0px;"><abbr
+														aria-label="June 2, 2024">2</abbr></button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
-					<table>
-						<tbody>
-							<tr>
-								<td>
-									<img src="img/people.png" class="todimg">
-
-								</td>
-
-								<td class="to3">
-									<h5>John Doe</h5>
-									<h6>Senior Python Developer</h6>
-									<h6>Hired by salmi</h6>
-								</td>
-								<td class="to3">
-									<button class="bttodo">Details</button>
-								</td>
-							</tr>
-
-							<tr>
-								<td>
-									<img src="img/people.png" class="todimg">
-
-								</td>
-
-								<td class="to3">
-									<h5>John Doe</h5>
-									<h6>Senior Python Developer</h6>
-									<h6>Hired by salmi</h6>
-								</td>
-								<td class="to3">
-									<button class="bttodo">Details</button>
-								</td>
-							</tr>
-
-							<tr>
-								<td>
-									<img src="img/people.png" class="todimg">
-
-								</td>
-
-								<td class="to3">
-									<h5>John Doe</h5>
-									<h6>Senior Python Developer</h6>
-									<h6>Hired by salmi</h6>
-								</td>
-								<td class="to3">
-									<button class="bttodo">Details</button>
-								</td>
-							</tr>
-
-							<tr>
-								<td>
-									<img src="img/people.png" class="todimg">
-
-								</td>
-
-								<td class="to3">
-									<h5>John Doe</h5>
-									<h6>Senior Python Developer</h6>
-									<h6>Hired by salmi</h6>
-								</td>
-								<td class="to3">
-									<button class="bttodo">Details</button>
-								</td>
-							</tr>
-						</tbody>
-					</table>
+					<div class="statusobj">
+						<div class="statusheader">
+							<h3>Upcomings</h3>
+							<p style="font-size: 16px; color: rgb(10, 102, 194); text-decoration: underline;">View All
+							</p>
+						</div>
+						<div class="statusdetails">
+							<div class="dateBox">
+								<p>7</p>
+								<p>Feb</p>
+							</div>
+							<div class="employee-details">
+								<p class="emp-title">Interview with Designer</p>
+								<p style="font-size: 12px; font-weight: 400;">Created by <span
+										class="spl-class">Stephan</span></p>
+								<p style="font-size: 10px;">10 A.M to 11 A.M</p>
+							</div>
+							<div style="display: flex; justify-content: end;"><button class="but fill"
+									fdprocessedid="y2pbca">Details</button></div>
+						</div>
+						<div class="statusdetails">
+							<div class="dateBox">
+								<p>7</p>
+								<p>Feb</p>
+							</div>
+							<div class="employee-details">
+								<p class="emp-title">Interview with Designer</p>
+								<p style="font-size: 12px; font-weight: 400;">Created by <span
+										class="spl-class">Stella</span></p>
+								<p style="font-size: 10px;">10 A.M to 11 A.M</p>
+							</div>
+							<div style="display: flex; justify-content: end;"><button class="but fill"
+									fdprocessedid="2iv38">Details</button></div>
+						</div>
+						<div class="statusdetails">
+							<div class="dateBox">
+								<p>7</p>
+								<p>Feb</p>
+							</div>
+							<div class="employee-details">
+								<p class="emp-title">Interview with Designer</p>
+								<p style="font-size: 12px; font-weight: 400;">Created by <span
+										class="spl-class">Stella</span></p>
+								<p style="font-size: 10px;">10 A.M to 11 A.M</p>
+							</div>
+							<div style="display: flex; justify-content: end;"><button class="but fill"
+									fdprocessedid="awudbb">Details</button></div>
+						</div>
+					</div>
+					<div class="statusobj">
+						<div class="statusheader">
+							<h3>Activity</h3>
+							<p style="font-size: 16px; color: rgb(10, 102, 194); text-decoration: underline;">View All
+							</p>
+						</div>
+						<div class="statusdetails"><img src="./img/user_act.png" class="todimg"
+								style="width: 40px; height: 40px;">
+							<div class="employee-details">
+								<p class="emp-title">Interview with Designer<span class="spl-class">[python
+										developer]</span></p>
+								<p style="font-size: 12px; font-weight: 400;">Created by </p>
+								<p style="font-size: 10px;">10 A.M to 11 A.M</p>
+							</div>
+							<div></div>
+						</div>
+						<div class="statusdetails"><img src="./img/user_act.png" class="todimg"
+								style="width: 40px; height: 40px;">
+							<div class="employee-details">
+								<p class="emp-title">Interview with Designer<span class="spl-class">[python
+										developer]</span></p>
+								<p style="font-size: 12px; font-weight: 400;">Created by </p>
+								<p style="font-size: 10px;">10 A.M to 11 A.M</p>
+							</div>
+							<div></div>
+						</div>
+						<div class="statusdetails"><img src="./img/user_act.png" class="todimg"
+								style="width: 40px; height: 40px;">
+							<div class="employee-details">
+								<p class="emp-title">Interview with Designer<span class="spl-class">[python
+										developer]</span></p>
+								<p style="font-size: 12px; font-weight: 400;">Created by </p>
+								<p style="font-size: 10px;">10 A.M to 11 A.M</p>
+							</div>
+							<div></div>
+						</div>
+					</div>
+					<div class="statusobj">
+						<div class="statusheader">
+							<h3>Hiring Candidates</h3>
+							<p style="font-size: 16px; color: rgb(10, 102, 194); text-decoration: underline;">View All
+							</p>
+						</div>
+						<div class="statusdetails"><img src="./img/people.png" class="todimg"
+								style="width: 40px; height: 40px;">
+							<div class="employee-details">
+								<p class="emp-title">John Doe<span class="spl-class"></span></p>
+								<p style="font-size: 12px; font-weight: 400;">Senior Python Develpper </p>
+								<p style="font-size: 10px;">Hired by: Stella</p>
+							</div>
+							<div style="display: flex; justify-content: end;"><button class="but unfill"
+									fdprocessedid="2eysun">Details</button></div>
+						</div>
+						<div class="statusdetails"><img src="./img/people.png" class="todimg"
+								style="width: 40px; height: 40px;">
+							<div class="employee-details">
+								<p class="emp-title">John Doe<span class="spl-class"></span></p>
+								<p style="font-size: 12px; font-weight: 400;">Senior Python Develpper</p>
+								<p style="font-size: 10px;">Hired by: Stella</p>
+							</div>
+							<div style="display: flex; justify-content: end;"><button class="but unfill"
+									fdprocessedid="ub6tdj">Details</button></div>
+						</div>
+						<div class="statusdetails"><img src="./img/people.png" class="todimg"
+								style="width: 40px; height: 40px;">
+							<div class="employee-details">
+								<p class="emp-title">John Doe<span class="spl-class"></span></p>
+								<p style="font-size: 12px; font-weight: 400;">Senior Python Develpper</p>
+								<p style="font-size: 10px;">Hired by: Stella</p>
+							</div>
+							<div style="display: flex; justify-content: end;"><button class="but unfill"
+									fdprocessedid="fustc">Details</button></div>
+						</div>
+					</div>
 				</div>
 			</div>
+
+
 		</main>
 		<!-- MAIN -->
 	</section>
